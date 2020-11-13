@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "code": "TEHRAN",
+    "title": "تهران",
+    "cities": [
+      {
+        "id": 1,
+        "code": "TEHRAN",
+        "title": "تهران"
+      },
+      {
+        "id": 1,
+        "code": "DAMAVAND",
+        "title": "دماوند"
+      },
+      {
+        "id": 1,
+        "code": "RODEHEN",
+        "title": "رودهن"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "code": "ESFAHAN",
+    "title": "اصفهان",
+    "cities": [
+      {
+        "id": 4,
+        "code": "ESFAHAN",
+        "title": "اصفهان"
+      },{
+        "id": 5,
+        "code": "SHAHIN SHAR",
+        "title": "شهاهین شهر"
+      },{
+        "id": 6,
+        "code": "SHAREZA",
+        "title": "شهرضا"
+      },{
+        "id": 7,
+        "code": "SEMMIROM",
+        "title": "سمیروم"
+      },{
+        "id": 8,
+        "code": "SEMMIROM",
+        "title": "کاشان"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "code": "KHOZESTAN",
+    "title": "خوزستان",
+    "cities": [
+      {
+        "id": 9,
+        "code": "AHWAZ",
+        "title": "اهواز"
+      },{
+        "id": 10,
+        "code": "ABADAN",
+        "title": "آبادان"
+      },{
+        "id": 11,
+        "code": "BEHBAHAN",
+        "title": "بهبهان"
+      },{
+        "id": 12,
+        "code": "SHOSHTAR",
+        "title": "شوشتر"
+      },{
+        "id": 13,
+        "code": "DEZFUL",
+        "title": "دزفول"
+      }
+    ]
+  }
+]

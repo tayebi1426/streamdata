@@ -1,0 +1,137 @@
+//overwrite kendo ui styles
+body[dir = 'rtl'] {
+  .k-grid th:first-child, .k-grid td:first-child {
+    border-left-width: 1px !important;
+  }
+  .k-grid th:last-child, .k-grid td:last-child {
+    border-left-width: 0 !important;
+  }
+}
+
+.k-grid {
+  .k-grid-header {
+    padding: 0 !important;
+  }
+  tr {
+    td {
+      padding: 0.4rem;
+    }
+    td:last-child {
+      span {
+        margin-left: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+  thead {
+    color: black;
+    th {
+      padding: 0.6rem 0;
+      text-align: center;
+      vertical-align: middle;
+      font-weight: 500;
+      a {
+        text-align: center;
+      }
+    }
+  }
+  .gridIndex {
+    text-align: center;
+    vertical-align: middle;
+    width: 40px;
+  }
+}
+
+.gridToolbar {
+  margin: 0.6rem 0;
+}
+
+.k-grid-norecords {
+  display: table-row;
+}
+
+span.k-dropdown {
+  display: inline;
+  span.k-dropdown-wrap {
+    background: unset none !important;
+    height: calc(1.5em + .75rem + 2px);
+    background-color: unset;
+    background-clip: unset;
+    border: 1px solid #d7d7d7;
+  }
+}
+
+.k-dropdown-wrap, .k-dropdown .k-dropdown-wrap:hover {
+  height: calc(1.5em + .75rem + 2px);
+  background-clip: unset;
+  background-image: none !important;
+  background-color: unset !important;
+}
+
+.k-treeview {
+  .k-i-collapse {
+    color: #000000;
+  }
+  .k-in {
+    padding: 2px !important;
+  }
+  .k-treeview-lines {
+    padding: 0;
+  }
+  .k-content {
+    margin: 15px !important;
+  }
+  .k-i-expand, .k-i-collapse {
+    margin-left: 0 !important;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 15px;
+    color: #000000;
+  }
+}
+
+.k-list-container {
+  z-index: 1051 !important;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.k-grid-content {
+  overflow-y: auto !important;
+}
+
+.k-grid table th, td {
+  text-align: center !important;
+}
+
+.k-grid-header .k-header:first-child {
+  border-left-width: 1px !important;
+}
+
+.k-grid-header .k-header:last-child {
+  border-left-width: 0px !important;
+}
+
+.k-grid th:first-child, .k-grid td:first-child {
+  border-left-width: 1px !important;
+}
+
+@media (max-width: 560px) {
+  .k-grid table {
+    table-layout: auto !important;
+  }
+  .k-grid table td, th {
+    max-width: 150px;
+    min-width: 150px;
+  }
+  .k-grid table .grid-selection-header, .grid-index-header, .grid-selection, .grid-index {
+    max-width: 40px !important;
+    min-width: 40px !important;
+  }
+}
+

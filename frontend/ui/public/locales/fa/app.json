@@ -1,0 +1,52 @@
+{
+  "add": "افزودن",
+  "edit": "ویرایش",
+  "save": "ثبت",
+  "password": "رمز عبور",
+  "email": "ایمیل",
+  "gridIndex": "ردیف",
+  "search": "جستجو",
+  "clear": "پاک کردن",
+  "cancel": "انصراف",
+  "commands": "عملیات",
+  "personList": "لیست اشخاص",
+  "loginPage": {
+    "username": "نام کاربری",
+    "password": "کلمه عبور",
+    "forgotPassword": "رمز عبور را فراموش کرده اید؟",
+    "login": "ورود"
+  },
+  "employee": {
+    "employee_info": "اطلاعات کارمند",
+    "personal_info": "اطلاعات شخصی",
+    "contact_info": "اطلاعات تماس",
+    "address_info": "آدرس",
+    "skill_info": "مهارتها"
+  },
+  "person": {
+    "firstName": "نام",
+    "lastName": "نام خانوادگی",
+    "fatherName": "نام پدر",
+    "nationalCode": "کد ملی",
+    "birthDate": "تاریخ تولد",
+    "marriedState": "متاهل",
+    "gender": "جنسیت",
+    "description": "توضیحات"
+  },
+  "address": {
+    "province": "استان",
+    "city": "شهر",
+    "fullAddress": "آدرس",
+    "postalCode": "کد پستی"
+  },
+  "contact": {
+    "email": "ایمیل",
+    "mobile": "شماره موبایل",
+    "tel": "تلفن ثابت"
+  },
+  "error": {
+    "invalid_grant": "نام کاربری یا کلمه عبور اشتباه است",
+    "network_connection": "خطا در ارتباط با سرور",
+    "unhandled_error": "خطا سیستمی رخ داده است"
+  }
+}

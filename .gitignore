@@ -1,6 +1,15 @@
 # Compiled class file
 *.class
-
+target/
+.idea
+node_modules/
+*.tmp/
+package-lock.json
+*.iml
+*.lck
+maindb.lck
+yarn.lock
+/tools/hsql-server/data/maindb.lck
 # Log file
 *.log
 

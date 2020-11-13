@@ -1,0 +1,9 @@
+/.idea
+/build
+/public
+/src
+/docs
+.babelrc
+.env.*
+package-lock.json
+yarn.lock

@@ -1,0 +1,251 @@
+$card-border-radius: 0.75rem;
+$padding-5-7: 0.5rem 0.75rem;
+
+body {
+  font-family: IRANSans, sans-serif !important;
+  font-weight: normal !important;
+}
+
+.navbar {
+  padding: unset !important;
+
+  .navbar-logo {
+    height: 3rem !important;
+  }
+}
+
+.pull-left {
+  float: left;
+  text-align-last: left;
+}
+
+.pull-right {
+  float: right;
+  text-align-last: right;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-small {
+  font-size: 0.8em;
+}
+
+.text-xsmall {
+  font-size: 0.6em;
+}
+
+.text-large {
+  font-size: 1.2em;
+}
+
+.text-xlarge {
+  font-size: 1.4em;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-ultralight {
+  font-weight: 200;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: normal;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-black {
+  font-weight: 900;
+}
+
+.bb_dashed_1 {
+  border-bottom: dashed 1px;
+}
+
+.bb_dashed_2 {
+  border-bottom: dashed 2px;
+}
+
+.cursor-pointer {
+  cursor: pointer
+}
+
+// if used in SCSS, this can be reduced to
+// .k-hierarchy-cell .k-plus::before { @extends .fa-expand; }
+
+.btn-container button {
+  margin: 15px 0 15px 15px;
+}
+
+.btn-container-flat button {
+  margin: 0 0 0 15px;
+}
+
+.navbar.fixed-top {
+  ul {
+    list-style: none;
+
+    li {
+      float: right;
+    }
+  }
+}
+
+div.card {
+ box-shadow:  10px 12px 15px 2px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+  .card-body {
+    padding: 0.5rem 2rem;
+  }
+
+  div.card-title {
+    cursor: pointer;
+    margin-bottom: 0 !important;
+
+    .card-title-caption {
+      margin: auto;
+      padding: 0.5rem 1rem;
+    }
+
+    .card-title-collapse-btn {
+      float: left;
+    }
+  }
+}
+
+div.card.rounded {
+  border-radius: $card-border-radius !important;
+}
+
+div.card-title.rounded {
+  border-radius: $card-border-radius $card-border-radius 0 0 !important;
+}
+
+.x-label, .custom-control-label {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.tab-content {
+  padding: 0.5rem 0.75em;
+}
+
+.nav-tabs .nav-item {
+  padding: 0.2rem 0.4rem;
+}
+
+input.form-control {
+  padding: 0.2rem !important;
+  height: calc(1.5em + .75rem + 2px)
+}
+
+button.x-btn {
+  margin: 0 0.1rem;
+  text-align: center;
+  padding: $padding-5-7;
+  border-radius: 0.4rem;
+}
+
+button.btn-lg {
+  min-width: 4rem;
+}
+
+button.btn-md {
+  min-width: 2rem;
+}
+
+button.btn-sm {
+  min-width: 1rem;
+}
+
+//tab
+li.nav-item {
+  cursor: pointer;
+}
+
+.sidebar {
+  .main-menu {
+    .nav-item {
+      a {
+        padding: 0.2rem;
+
+        b {
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+.form-group {
+  margin-bottom: 0.7rem;
+}
+
+fieldset > legend {
+  color: #15151570;
+  border-bottom: #66556650 1px solid;
+  //padding: 0 0.5rem;
+  width: 100%;
+  margin: 0.75rem 0;
+  font-size: medium;
+}
+
+
+.scrolling-wrapper {
+  //width: 30em;
+  //overflow-x: auto;
+  //white-space: nowrap;
+}
+
+.scrolling-command {
+  //width: 100%;
+}
+
+.gridDropdownCommand {
+  //width: 200px;
+}
+
+.grid-column {
+
+}
+
+.page-link.next {
+  i::before {
+    content: "\f053" !important;
+  }
+}
+
+.page-link.prev {
+  i::before {
+    content: "\f054" !important;
+  }
+}
+
+.data-grid-command{
+  margin: 0 5px;
+}
+.data-grid-toolbar{
+  margin: 10px;
+}

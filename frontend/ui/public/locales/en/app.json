@@ -1,0 +1,17 @@
+{
+  "add": "افزودن",
+  "edit": "edit",
+  "save": "save",
+  "password": "رمز عبور",
+  "email": "ایمیل",
+  "gridIndex": "ردیف",
+  "search": "جستجو",
+  "clear": "پاک کردن",
+  "cancel": "انصراف",
+  "person": {
+    "firstName": "نام",
+    "lastName": "نام خانوادگی",
+    "nationalCode": "کد ملی",
+    "birthDate": "تاریخ تولد"
+  }
+}

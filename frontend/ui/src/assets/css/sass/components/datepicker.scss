@@ -1,0 +1,21 @@
+.tether-element {
+  z-index: 99999 !important;
+}
+
+.calendarContainer {
+  width: 22rem;
+  .heading {
+    .title {
+      width: 40% !important;
+    }
+    .rc-time-picker {
+      width: 27% !important;
+    }
+  }
+  .monthsList button {
+    text-align: center;
+  }
+  .dayWrapper button, .calendarContainer .dayWrapper button, .jalaali.calendarContainer, button.selectToday {
+    text-align: center;
+  }
+}
