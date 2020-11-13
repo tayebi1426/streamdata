@@ -8,7 +8,7 @@ yarn.lock
 package-lock.json
 target/
 node_modules/
-tools/hsql-server/data/**
+tools/hsql-server/data/
 # BlueJ files
 *.ctxt
 

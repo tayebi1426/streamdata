@@ -5,7 +5,7 @@ import org.springframework.validation.annotation.Validated;
 
 import javax.validation.constraints.Min;
 
-@ConfigurationProperties(prefix = "oauth-srv")
+@ConfigurationProperties(prefix = "streamdata.oauth-server")
 @Validated
 public class OAuthServerProps {
 

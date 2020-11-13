@@ -16,23 +16,13 @@
     <description>Streamdata Parent</description>
 
     <modules>
-        <module>core</module>
-        <module>base-model</module>
         <module>auth-server</module>
+        <module>base-model</module>
+        <module>core</module>
         <module>test-app</module>
     </modules>
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>ir.streamdata</groupId>
-                <artifactId>base-model</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
-            <dependency>
-                <groupId>ir.streamdata</groupId>
-                <artifactId>core</artifactId>
-                <version>0.0.1-SNAPSHOT</version>
-            </dependency>
             <dependency>
                 <groupId>org.springframework.security.oauth</groupId>
                 <artifactId>spring-security-oauth2</artifactId>

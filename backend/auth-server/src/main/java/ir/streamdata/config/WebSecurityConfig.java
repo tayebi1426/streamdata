@@ -18,10 +18,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import java.util.Collections;
 
-@EnableWebMvc
-@EnableWebSecurity
+
 @Configuration
-public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Bean(BeanIds.AUTHENTICATION_MANAGER)
     @Override

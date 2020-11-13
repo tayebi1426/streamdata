@@ -1,4 +1,4 @@
-package ir.streamdata.config;
+package ir.streamdata.config.jwt;
 
 import org.springframework.security.jwt.JwtHelper;
 import org.springframework.security.jwt.crypto.sign.RsaSigner;
@@ -15,14 +15,15 @@ import java.util.Map;
 public class CustomJwtAccessTokenConverter extends JwtAccessTokenConverter {
 
     private final RsaSigner signer;
-    private Map<String, String> headers;
-    private JsonParser objectMapper = JsonParserFactory.create();
+    private final Map<String, String> headers;
+    private final JsonParser objectMapper;
 
     public CustomJwtAccessTokenConverter(KeyPair keyPair, Map<String, String> headers) {
         super();
         super.setKeyPair(keyPair);
         signer = new RsaSigner((RSAPrivateKey) keyPair.getPrivate());
         this.headers = headers;
+        this.objectMapper = JsonParserFactory.create();
     }
 
     @Override

@@ -1,4 +1,4 @@
-package ir.streamdata.config;
+package ir.streamdata.config.jwt;
 
 import com.nimbusds.jose.JWSAlgorithm;
 import com.nimbusds.jose.jwk.JWKSet;

@@ -9,12 +9,13 @@ server:
 spring:
   datasource:
     driverclassname: org.hsqldb.jdbc.JDBCDriver
-    url: jdbc:hsqldb:hsql://127.0.0.1:5005/maindb
+    url: jdbc:hsqldb:hsql://127.0.0.1:5005/streamdata
     username:
     password:
     type: org.hsqldb.jdbc.JDBCDataSource
 
 
-oauth-srv:
-  accessTokenValiditySeconds: 1800
+streamdata:
+  oauth-server:
+    access-token-validity-seconds: 600
 

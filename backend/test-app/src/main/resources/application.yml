@@ -1,16 +1,20 @@
 server:
   port: 9001
 
+logging:
+  level:
+    root: info
+    org.springframework: debug
+
 spring:
   security:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: http://127.0.0.1:8001/.well-known/jwks.json
-
+          jwk-set-uri: http://127.0.0.1:8001/jwks.json
   datasource:
     driverclassname: org.hsqldb.jdbc.JDBCDriver
-    url: jdbc:hsqldb:hsql://127.0.0.1:5005/maindb
+    url: jdbc:hsqldb:hsql://127.0.0.1:5005/streamdata
     username:
     password:
   jpa:
@@ -21,7 +25,3 @@ spring:
       hibernate:
         hbm2ddl:
           import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
-logging:
-  level:
-    root: info
-    org.springframework: debug

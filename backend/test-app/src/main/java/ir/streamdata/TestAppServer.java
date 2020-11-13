@@ -6,10 +6,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @EnableWebMvc()
 @SpringBootApplication(scanBasePackages = "ir.streamdata")
-public class PersonalAccountServer {
+public class TestAppServer {
 
     public static void main(String[] args) {
-        SpringApplication.run(PersonalAccountServer.class, args);
+        SpringApplication.run(TestAppServer.class, args);
     }
 }
 

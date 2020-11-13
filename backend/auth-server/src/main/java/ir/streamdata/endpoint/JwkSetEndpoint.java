@@ -11,13 +11,13 @@ import java.util.Map;
 @RestController
 public class JwkSetEndpoint {
 
-    private JWKSet jwkSet;
+    private final JWKSet jwkSet;
 
     public JwkSetEndpoint(JWKSet jwkSet) {
         this.jwkSet = jwkSet;
     }
 
-    @GetMapping("/.well-known/jwks.json")
+    @GetMapping("/jwks.json")
     @ResponseBody
     public JSONObject getKey() {
         return jwkSet.toJSONObject();

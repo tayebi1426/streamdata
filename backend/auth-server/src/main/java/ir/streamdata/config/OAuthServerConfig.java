@@ -1,10 +1,14 @@
 package ir.streamdata.config;
 
 import ir.streamdata.props.OAuthServerProps;
+import ir.streamdata.service.impl.JdbcUserDetailsService;
+import ir.streamdata.service.impl.UserTokenEnhancer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -13,22 +17,29 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.*;
 
+import javax.sql.DataSource;
 import java.util.List;
 
 @Configuration
-@EnableAuthorizationServer
-public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
+public class OAuthServerConfig extends AuthorizationServerConfigurerAdapter {
 
-    @Autowired
-    AccessTokenConverter accessTokenConverter;
-    @Autowired
-    List<TokenEnhancer> tokenEnhancerList;
-    @Autowired
-    private TokenStore tokenStore;
-    @Autowired
-    private AuthenticationManager authenticationManager;
-    @Autowired
-    OAuthServerProps oAuthServerProps;
+    private final AccessTokenConverter accessTokenConverter;
+    private final List<TokenEnhancer> tokenEnhancerList;
+    private final TokenStore tokenStore;
+    private final AuthenticationManager authenticationManager;
+    private final OAuthServerProps oAuthServerProps;
+
+    public OAuthServerConfig(AccessTokenConverter accessTokenConverter,
+                             List<TokenEnhancer> tokenEnhancerList,
+                             TokenStore tokenStore,
+                             AuthenticationManager authenticationManager,
+                             OAuthServerProps oAuthServerProps) {
+        this.accessTokenConverter = accessTokenConverter;
+        this.tokenEnhancerList = tokenEnhancerList;
+        this.tokenStore = tokenStore;
+        this.authenticationManager = authenticationManager;
+        this.oAuthServerProps = oAuthServerProps;
+    }
 
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) {
@@ -71,6 +82,21 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
         TokenEnhancerChain tokenEnhancerChain = new TokenEnhancerChain();
         tokenEnhancerChain.setTokenEnhancers(tokenEnhancerList);
         return tokenEnhancerChain;
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService(JdbcTemplate jdbcTemplate) {
+        return new JdbcUserDetailsService(jdbcTemplate);
+    }
+
+    @Bean
+    TokenEnhancer tokenEnhancer(UserDetailsService userDetailsService) {
+        return new UserTokenEnhancer(userDetailsService);
+    }
+
+    @Bean
+    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+        return new JdbcTemplate(dataSource);
     }
 
     @Bean
