@@ -15,10 +15,18 @@
     <name>Streamdata Parent</name>
     <description>Streamdata Parent</description>
 
+    <repositories>
+        <repository>
+            <id>rayauto-repo</id>
+            <name>rayauto-repo</name>
+        </repository>
+    </repositories>
+
     <modules>
         <module>auth-server</module>
         <module>base-model</module>
         <module>core</module>
+        <module>json-schema-management</module>
         <module>test-app</module>
     </modules>
     <dependencyManagement>
@@ -84,12 +92,14 @@
 
                             <!-- ignore annotations for "used but undeclared" warnings -->
                             <ignoredUsedUndeclaredDependencies>
-                                <ignoredUsedUndeclaredDependency>com.google.code.findbugs:annotations</ignoredUsedUndeclaredDependency>
+                                <ignoredUsedUndeclaredDependency>com.google.code.findbugs:annotations
+                                </ignoredUsedUndeclaredDependency>
                             </ignoredUsedUndeclaredDependencies>
 
                             <!-- ignore annotations for "unused but declared" warnings -->
                             <ignoredUnusedDeclaredDependencies>
-                                <ignoredUnusedDeclaredDependency>com.google.code.findbugs:annotations</ignoredUnusedDeclaredDependency>
+                                <ignoredUnusedDeclaredDependency>com.google.code.findbugs:annotations
+                                </ignoredUnusedDeclaredDependency>
                             </ignoredUnusedDeclaredDependencies>
                         </configuration>
                     </execution>

@@ -1,13 +1,10 @@
 import React, {Suspense} from 'react';
 import {BrowserRouter} from 'react-router-dom';
 import {Provider} from "react-redux";
-import {SwitchRouter,XhrRequest} from './components'
+import {SwitchRouter} from './components'
 import configStore from './redux'
 import appRoutes from './routing'
-import axios from 'axios'
-import Security from "./service/SecurityService";
 import './assets'
-XhrRequest.registerResponseInterceptors();
 /*
 axios.interceptors.request.use((config) => {
     console.log('axios pre send request',config);

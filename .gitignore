@@ -9,6 +9,7 @@ package-lock.json
 target/
 node_modules/
 tools/hsql-server/data/
+build/
 # BlueJ files
 *.ctxt
 

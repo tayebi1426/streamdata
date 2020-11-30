@@ -9,7 +9,7 @@ import messageService from "../service/messageService";
 const ADD_ACCOUNT_RULES = {
     firstName: 'required',
     lastName: 'required',
-    nationalCode: 'required|number',
+    nationalCode: 'required|numeric',
     birthDate: 'required|date'
 };
 
