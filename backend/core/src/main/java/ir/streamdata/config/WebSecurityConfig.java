@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 /*import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;*/
+import org.springframework.context.annotation.Import;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
@@ -20,7 +21,7 @@ import java.util.Collections;
 
 @EnableResourceServer
 @EnableWebSecurity
-@Configuration
+@Configuration()
 public class WebSecurityConfig extends ResourceServerConfigurerAdapter {
 
     private final TokenStore tokenStore;

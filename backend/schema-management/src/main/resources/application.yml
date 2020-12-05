@@ -1,0 +1,27 @@
+server:
+  port: 9001
+
+logging:
+  level:
+    root: info
+    org.springframework: error
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://127.0.0.1:8001/jwks.json
+  datasource:
+    driverclassname: org.hsqldb.jdbc.JDBCDriver
+    url: jdbc:hsqldb:hsql://127.0.0.1:5005/streamdata
+    username:
+    password:
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        hbm2ddl:
+          import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor

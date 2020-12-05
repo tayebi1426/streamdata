@@ -1,6 +1,6 @@
 package ir.streamdata.service;
 
-import ir.streamdata.dto.PersonDto;
+import ir.streamdata.model.dto.PersonDto;
 
 import java.util.List;
 

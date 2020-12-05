@@ -13,9 +13,16 @@ spring:
     username:
     password:
     type: org.hsqldb.jdbc.JDBCDataSource
-
+  activemq:
+    pool:
+      enabled: off
 
 streamdata:
   oauth-server:
-    access-token-validity-seconds: 600
-
+    token:
+      access-validity-seconds: 600
+      refresh-validity-seconds: 600
+    jwk:
+      keystore-location: oauth2-server.jks
+      keystore-alias: oauth2-server-alias
+      keystore-password: htb98980

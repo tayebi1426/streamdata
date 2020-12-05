@@ -1,0 +1,16 @@
+{
+  "properties": [
+    {
+      "name": "streamdata.oauth-server.access-token-validity-seconds",
+      "type": "ir.streamdata.props.AuthServerProps",
+      "sourceType": "ir.streamdata.props.AuthServerProps",
+      "defaultValue": 12000,
+      "description": "Description for streamdata.oauth-server.access-token-validity-seconds."
+    },
+    {
+      "name": "streamdata.oauth-server.jwk-keystore-location",
+      "type": "java.lang.String",
+      "description": "Description for streamdata.oauth-server.jwk-keystore-location."
+    }
+  ]
+}

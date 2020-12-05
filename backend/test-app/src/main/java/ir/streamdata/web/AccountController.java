@@ -1,8 +1,8 @@
 package ir.streamdata.web;
 
-import ir.streamdata.dto.AccountDto;
-import ir.streamdata.dto.CustomUserDetails;
-import ir.streamdata.dto.datagrid.DataSourceResponse;
+import ir.streamdata.model.dto.AccountDto;
+import ir.streamdata.model.dto.CustomUserDetails;
+import ir.streamdata.model.dto.datagrid.DataSourceResponse;
 import ir.streamdata.service.AccountService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

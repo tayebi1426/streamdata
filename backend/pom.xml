@@ -15,20 +15,22 @@
     <name>Streamdata Parent</name>
     <description>Streamdata Parent</description>
 
-    <repositories>
-        <repository>
-            <id>rayauto-repo</id>
-            <name>rayauto-repo</name>
-        </repository>
-    </repositories>
+
 
     <modules>
         <module>auth-server</module>
         <module>base-model</module>
         <module>core</module>
-        <module>json-schema-management</module>
+        <module>schema-management</module>
         <module>test-app</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>

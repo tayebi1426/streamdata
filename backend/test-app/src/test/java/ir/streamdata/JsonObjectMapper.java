@@ -1,7 +1,7 @@
 package ir.streamdata;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ir.streamdata.dto.TransactionDto;
+import ir.streamdata.model.dto.TransactionDto;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;

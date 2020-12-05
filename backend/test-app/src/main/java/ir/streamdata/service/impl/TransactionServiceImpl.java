@@ -1,9 +1,9 @@
 package ir.streamdata.service.impl;
 
-import ir.streamdata.dto.TransactionDto;
-import ir.streamdata.entity.Account;
-import ir.streamdata.entity.Transaction;
-import ir.streamdata.entity.TransactionType;
+import ir.streamdata.model.dto.TransactionDto;
+import ir.streamdata.model.entity.Account;
+import ir.streamdata.model.entity.Transaction;
+import ir.streamdata.model.entity.TransactionType;
 import ir.streamdata.repository.TransactionRepo;
 import ir.streamdata.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;

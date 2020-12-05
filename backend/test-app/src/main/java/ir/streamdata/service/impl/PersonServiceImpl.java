@@ -1,9 +1,7 @@
 package ir.streamdata.service.impl;
 
-import ir.streamdata.dto.GenderDto;
-import ir.streamdata.dto.PersonDto;
-import ir.streamdata.entity.Gender;
-import ir.streamdata.entity.Person;
+import ir.streamdata.model.dto.PersonDto;
+import ir.streamdata.model.entity.base.Person;
 import ir.streamdata.mapper.DtoMapper;
 import ir.streamdata.mapper.EntityMapper;
 import ir.streamdata.repository.GenderRepository;

@@ -28,7 +28,7 @@ const SidebarMenu = () => {
         <Nav vertical className="list-unstyled">
             <NavItem className="active">
                 <NavLink
-                    to="/person"
+                    to="/schema/objectDefinitionList"
                     onClick={e => {
                         console.debug('e : ', e);
                     }

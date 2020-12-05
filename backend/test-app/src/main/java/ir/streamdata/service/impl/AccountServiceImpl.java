@@ -1,8 +1,8 @@
 package ir.streamdata.service.impl;
 
-import ir.streamdata.dto.AccountDto;
-import ir.streamdata.dto.datagrid.DataSourceResponse;
-import ir.streamdata.entity.Account;
+import ir.streamdata.model.dto.AccountDto;
+import ir.streamdata.model.dto.datagrid.DataSourceResponse;
+import ir.streamdata.model.entity.Account;
 import ir.streamdata.repository.AccountRepo;
 import ir.streamdata.service.AccountService;
 import org.springframework.stereotype.Service;

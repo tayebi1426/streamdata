@@ -1,7 +1,7 @@
 package ir.streamdata.web;
 
 
-import ir.streamdata.dto.TransactionDto;
+import ir.streamdata.model.dto.TransactionDto;
 import ir.streamdata.service.TransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

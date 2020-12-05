@@ -1,7 +1,8 @@
 package ir.streamdata.repository;
 
 
-import ir.streamdata.entity.Transaction;
+import ir.streamdata.model.entity.Transaction;
+import ir.streamdata.repo.AbstractJpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -1,6 +1,6 @@
 package ir.streamdata.service;
 
-import ir.streamdata.dto.TransactionDto;
+import ir.streamdata.model.dto.TransactionDto;
 
 public interface TransactionService {
 

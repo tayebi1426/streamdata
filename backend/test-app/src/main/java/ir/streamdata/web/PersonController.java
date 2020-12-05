@@ -1,7 +1,7 @@
 package ir.streamdata.web;
 
-import ir.streamdata.dto.PersonDto;
-import ir.streamdata.dto.datagrid.DataSourceResponse;
+import ir.streamdata.model.dto.PersonDto;
+import ir.streamdata.model.dto.datagrid.DataSourceResponse;
 import ir.streamdata.service.PersonService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

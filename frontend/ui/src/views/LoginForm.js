@@ -19,7 +19,7 @@ const LoginForm = ({onLoginSuccess}) => {
                 setInvalidLogin(errorMessage);
             });
     };
-    return <Form initialValues={{username: 'admin', password: '1234'}}
+    return <Form initialValues={{username: 'admin', password: 'Admin@1234_'}}
                  validationRules={LOGIN_FORM_RULES}
                  onSubmit={onLogin}>
         <Row>

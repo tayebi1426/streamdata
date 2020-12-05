@@ -7,8 +7,8 @@ function SecureRoute(props) {
     let {authorities, ...restProps} = props;
 
     if (authorities && authorities.length > 0) {
-        let userAccount = SecurityService.getUserAccount();
-        if (!userAccount) {
+        let user = SecurityService.getCurrentUser();
+        if (!user) {
             return <Redirect to="/login"/>;
         }
         if (!SecurityService.hasAuthority(authorities)) {

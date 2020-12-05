@@ -1,9 +1,7 @@
 package ir.streamdata.config;
 
-import ir.streamdata.props.OAuthServerProps;
+import ir.streamdata.props.AuthServerProps;
 import ir.streamdata.service.impl.JdbcUserDetailsService;
-import ir.streamdata.service.impl.UserTokenEnhancer;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -12,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 import org.springframework.security.oauth2.provider.token.*;
@@ -27,18 +24,18 @@ public class OAuthServerConfig extends AuthorizationServerConfigurerAdapter {
     private final List<TokenEnhancer> tokenEnhancerList;
     private final TokenStore tokenStore;
     private final AuthenticationManager authenticationManager;
-    private final OAuthServerProps oAuthServerProps;
+    private final AuthServerProps authServerProps;
 
     public OAuthServerConfig(AccessTokenConverter accessTokenConverter,
                              List<TokenEnhancer> tokenEnhancerList,
                              TokenStore tokenStore,
                              AuthenticationManager authenticationManager,
-                             OAuthServerProps oAuthServerProps) {
+                             AuthServerProps authServerProps) {
         this.accessTokenConverter = accessTokenConverter;
         this.tokenEnhancerList = tokenEnhancerList;
         this.tokenStore = tokenStore;
         this.authenticationManager = authenticationManager;
-        this.oAuthServerProps = oAuthServerProps;
+        this.authServerProps = authServerProps;
     }
 
     @Override
@@ -71,7 +68,7 @@ public class OAuthServerConfig extends AuthorizationServerConfigurerAdapter {
         tokenServices.setTokenStore(tokenStore);
         tokenServices.setSupportRefreshToken(true);
         tokenServices.setReuseRefreshToken(true);
-        tokenServices.setAccessTokenValiditySeconds(oAuthServerProps.getAccessTokenValiditySeconds());
+        tokenServices.setAccessTokenValiditySeconds(authServerProps.getToken().getAccessValiditySeconds());
         tokenServices.setTokenEnhancer(tokenEnhancerChain());
         //tokenServices.setClientDetailsService(clientDetailsService());
         return tokenServices;
@@ -87,11 +84,6 @@ public class OAuthServerConfig extends AuthorizationServerConfigurerAdapter {
     @Bean
     public UserDetailsService userDetailsService(JdbcTemplate jdbcTemplate) {
         return new JdbcUserDetailsService(jdbcTemplate);
-    }
-
-    @Bean
-    TokenEnhancer tokenEnhancer(UserDetailsService userDetailsService) {
-        return new UserTokenEnhancer(userDetailsService);
     }
 
     @Bean

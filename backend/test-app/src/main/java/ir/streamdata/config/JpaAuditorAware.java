@@ -1,7 +1,7 @@
 package ir.streamdata.config;
 
-import ir.streamdata.dto.CustomUserDetails;
-import ir.streamdata.entity.User;
+import ir.streamdata.model.dto.CustomUserDetails;
+import ir.streamdata.model.entity.security.User;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.security.core.context.SecurityContextHolder;
 

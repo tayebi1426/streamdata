@@ -40,7 +40,7 @@ class DataGrid extends React.Component {
 
     dataStateChange = (e) => {
         console.log({e});
-        this.fetchGridData(this.state.readUrl, this.props.localData, e.data.skip, e.data.take);
+        this.fetchGridData(this.state.readUrl, this.props.localData, e.dataState.skip, e.dataState.take);
     };
 
 
